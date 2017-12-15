@@ -1,0 +1,125 @@
+﻿@model IEnumerable<SampleApp.Data_Access_Layer.DatModels.Customer>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Firstname)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Lastname)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.BillingAddress)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ShippingAddress)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.CustomField1)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.CustomField2)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.CustomField3)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.CustomField4)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.LoginID)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Password)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Email)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.PhoneNumber)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Insertedon)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Modifiedon)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.CreatedBy)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ModifiedBy)
+                </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Firstname)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Lastname)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BillingAddress)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ShippingAddress)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CustomField1)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CustomField2)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CustomField3)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CustomField4)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LoginID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Password)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Email)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PhoneNumber)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Insertedon)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Modifiedon)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CreatedBy)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ModifiedBy)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.ID">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.ID">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.ID">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
